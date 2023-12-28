@@ -227,6 +227,7 @@ public class NoteFrequency {
 
         System.out.println();
         System.out.printf("Note frequency is: %.3fHz", noteFrequency);
+        System.out.println();
 
     }
 }
