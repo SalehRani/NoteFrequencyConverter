@@ -243,13 +243,14 @@ public class NoteFrequency {
 
             System.out.print("Would you like to perform another calculation? (Y/N): ");
             String choice = keyboard.nextLine();
+            System.out.println();
 
             if (!(choice.equalsIgnoreCase("Yes") || choice.equalsIgnoreCase("Y") || choice.equalsIgnoreCase("No") || choice.equalsIgnoreCase("N"))) {
-                System.out.println("\nPlease provide the proper answer (\"Yes\", \"Y\", \"No\", \"N\"");
+                System.out.println("Please provide the proper answer (\"Yes\", \"Y\", \"No\", \"N\"");
             } else if (choice.equalsIgnoreCase("Yes") || choice.equalsIgnoreCase("Y")) {
                 continue;
             } else {
-                System.out.println("\nThank you for using NFC!");
+                System.out.println("Thank you for using NFC!");
                 break;
             }
         }
