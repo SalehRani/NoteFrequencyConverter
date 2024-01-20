@@ -6,15 +6,23 @@ public class NoteFrequency {
     public static void main(String[] args) {
 
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("=====================================================");
-        System.out.println("      ////\\\\\\\\            ////    ||||||||||||||||");
-        System.out.println("     ////  \\\\\\\\          ////     ||||||||||||||||");
-        System.out.println("    ////    \\\\\\\\        ////      ||||");
-        System.out.println("   ////      \\\\\\\\      ////       ||||||||||||||||");
-        System.out.println("  ////        \\\\\\\\    ////        ||||||||||||||||");
-        System.out.println(" ////          \\\\\\\\  ////         ||||");
-        System.out.println("////            \\\\\\\\////          ||||");
-        System.out.println("=====================================================");
+
+        System.out.println("\nNNNNNNNN        NNNNNNNN  FFFFFFFFFFFFFFFFFFFFFF         CCCCCCCCCCCCC");
+        System.out.println("N:::::::N       N::::::N  F::::::::::::::::::::F      CCC::::::::::::C");
+        System.out.println("N::::::::N      N::::::N  F::::::::::::::::::::F    CC:::::::::::::::C");
+        System.out.println("N:::::::::N     N::::::N  FF::::::FFFFFFFFF::::F   C:::::CCCCCCCC::::C");
+        System.out.println("N::::::::::N    N::::::N    F:::::F       FFFFFF  C:::::C       CCCCCC");
+        System.out.println("N:::::::::::N   N::::::N    F:::::F              C:::::C");
+        System.out.println("N:::::::N::::N  N::::::N    F::::::FFFFFFFFFF    C:::::C");
+        System.out.println("N::::::N N::::N N::::::N    F:::::::::::::::F    C:::::C");
+        System.out.println("N::::::N  N::::N:::::::N    F:::::::::::::::F    C:::::C");
+        System.out.println("N::::::N   N:::::::::::N    F::::::FFFFFFFFFF    C:::::C");
+        System.out.println("N::::::N    N::::::::::N    F:::::F              C:::::C");
+        System.out.println("N::::::N     N:::::::::N    F:::::F               C:::::C       CCCCCC");
+        System.out.println("N::::::N      N::::::::N  FF:::::::FF              C:::::CCCCCCCC::::C");
+        System.out.println("N::::::N       N:::::::N  F::::::::FF               CC:::::::::::::::C");
+        System.out.println("N::::::N        N::::::N  F::::::::FF                 CCC::::::::::::C");
+        System.out.println("NNNNNNNN         NNNNNNN  FFFFFFFFFFF                    CCCCCCCCCCCCC\n");
 
         boolean inOperation = true;
 
@@ -25,7 +33,7 @@ public class NoteFrequency {
             String note = null;
 
             while (validNoteName == false) {
-                System.out.print("\nPlease enter a note (# or b for accidentals): ");
+                System.out.print("Please enter a note (# or b for accidentals): ");
                 noteInput = keyboard.nextLine();
 
                 if ((!Character.isUpperCase(noteInput.charAt(0)))|| (noteInput.length() > 2 && (Character.isDigit(noteInput.charAt(1)) || Character.isDigit(noteInput.charAt(2))))) {
@@ -234,14 +242,17 @@ public class NoteFrequency {
                 n = 87;
             } else if (note.equals("C8")) {
                 n = 88;
+            } else {
+                System.out.println("\nThis note is not on an 88-key piano. Try again.\n");
+                continue;
             }
 
-            double noteFrequency = 440 * Math.pow(2, (n-49.0)/12.0);
+            double noteFrequency = 440 * Math.pow(2, (n - 49.0)/12.0);
 
             System.out.printf("\nNote frequency is: %.3fHz", noteFrequency);
             System.out.println();
 
-            System.out.print("Would you like to perform another calculation? (Y/N): ");
+            System.out.print("\nWould you like to perform another calculation? (Y/N): ");
             String choice = keyboard.nextLine();
             System.out.println();
 
